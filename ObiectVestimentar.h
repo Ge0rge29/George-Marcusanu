@@ -1,14 +1,18 @@
-//
-// Created by LENOVO on 12/7/2023.
-//
+// ObiectVestimentar.h
+#ifndef OBIECTVESTIMENTAR_H
+#define OBIECTVESTIMENTAR_H
 
-#ifndef OOP_OBIECTVESTIMENTAR_H
-#define OOP_OBIECTVESTIMENTAR_H
+#include "Obiect.h"
 
+class ObiectVestimentar : public Obiect {
+private:
+    std::string material;
 
-class ObiectVestimentar {
+public:
+    ObiectVestimentar(const std::string& nume, const std::string& material);
+    virtual ~ObiectVestimentar();
 
+    virtual void afiseazaDetalii() const override;
 };
 
-
-#endif //OOP_OBIECTVESTIMENTAR_H
+#endif // OBIECTVESTIMENTAR_H

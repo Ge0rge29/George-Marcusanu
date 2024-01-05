@@ -1,14 +1,18 @@
-//
-// Created by LENOVO on 12/7/2023.
-//
+// ObiectElectronic.h
+#ifndef OBIECTELECTRONIC_H
+#define OBIECTELECTRONIC_H
 
-#ifndef OOP_OBIECTELECTRONIC_H
-#define OOP_OBIECTELECTRONIC_H
+#include "Obiect.h"
 
+class ObiectElectronic : public Obiect {
+private:
+    std::string marca;
 
-class ObiectElectronic {
+public:
+    ObiectElectronic(const std::string& nume, const std::string& marca);
+    virtual ~ObiectElectronic();
 
+    virtual void afiseazaDetalii() const override;
 };
 
-
-#endif //OOP_OBIECTELECTRONIC_H
+#endif // OBIECTELECTRONIC_H

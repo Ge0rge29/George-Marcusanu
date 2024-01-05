@@ -1,14 +1,23 @@
-//
-// Created by LENOVO on 12/7/2023.
-//
+//cos cumparaturi.h
+#ifndef COS_CUMPARATURI_H
+#define COS_CUMPARATURI_H
 
-#ifndef OOP_COSCUMPARATURI_H
-#define OOP_COSCUMPARATURI_H
-
+#include "Produs.h"
+#include <vector>
 
 class CosCumparaturi {
+private:
+    std::vector<Produs> produse;
 
+public:
+    CosCumparaturi();
+    CosCumparaturi(const CosCumparaturi& altul);
+    CosCumparaturi& operator=(const CosCumparaturi& altul);
+    ~CosCumparaturi();
+
+    friend std::ostream& operator<<(std::ostream& os, const CosCumparaturi& cos);
+    void adaugaProdus(const Produs& produs);
+    void afisare() const;
 };
 
-
-#endif //OOP_COSCUMPARATURI_H
+#endif // COS_CUMPARATURI_H
